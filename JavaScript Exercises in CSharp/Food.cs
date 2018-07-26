@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JavaScript_Exercises_in_CSharp
+{
+    public class Food
+    {
+        private string _name;
+        public string Name { get { return _name; } }
+
+        public Food(string name)
+        {
+            this._name = name;
+        }
+
+        public override string ToString()
+        {
+            return _name;
+        }
+    }
+
+
+    public struct Foodstuff // note changed class to "struct"
+    {
+        private string _name;
+        public string Name { get { return _name; } }
+
+        public Foodstuff(string name)
+        {
+            this._name = name;
+        }
+
+        public override string ToString()
+        {
+            return _name;
+        }
+    }
+
+
+
+}
