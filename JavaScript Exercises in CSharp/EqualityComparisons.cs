@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace JavaScript_Exercises_in_CSharp
 {
 
@@ -114,8 +115,27 @@ namespace JavaScript_Exercises_in_CSharp
 
         static void Main(string[] args)
         {
+            Button button1 = new Button();
+            button1.Text = "Click me now!";
+
+            Button button2 = new Button();
+            button2.Text = "Click me now!";
+
             Console.WriteLine("Operator: " + AreIntsEqualOp(3, 3));
             Console.WriteLine("Method: " + AreIntsEqualMethod(3, 3));
+
+            Console.WriteLine(button1 == button2);
+            Console.WriteLine("Operator: " + AreButtonsEqualOp(button1, button2));
+            Console.WriteLine("Method: " + AreButtonsEqualMethod(button1, button2));
+
+            string str1 = "Click me now!";
+            string str2 = string.Copy((str1));
+
+            Console.WriteLine("Reference string: " + ReferenceEquals(str1, str2));
+            Console.WriteLine("Operator string: " + AreStringsEqualOp(str1, str2));
+            Console.WriteLine("Method string: " + AreStringEqualMethod(str1, str2));
+
+
             Console.ReadLine();
         }
 
@@ -129,11 +149,27 @@ namespace JavaScript_Exercises_in_CSharp
                 return x.Equals(y);
             }
 
+        static bool AreButtonsEqualOp(Button x, Button y)
+        {
+            return x == y;
+        }
+
+        static bool AreButtonsEqualMethod(Button x, Button y)
+        {
+            return x.Equals(y);
+        }
 
 
-           
+        static bool AreStringsEqualOp(string x, string y)
+        {
+            return x == y;
+        }
 
-        
+        static bool AreStringEqualMethod(string x, string y)
+        {
+            return x.Equals(y);
+        }
+
 
     }
 }
