@@ -23,7 +23,7 @@ namespace JavaScript_Exercises_in_CSharp
         {
 
             //// Complete the compareTriplets function below. STILL HAVE NOT COMPLETED!!!!
-           // https://www.hackerrank.com/challenges/compare-the-triplets/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+            // https://www.hackerrank.com/challenges/compare-the-triplets/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
             //static List<int> compareTriplets(List<int> a, List<int> b)
             //{
             //    //int [] A = List<int> a;
@@ -137,43 +137,84 @@ namespace JavaScript_Exercises_in_CSharp
             //}
 
 
-            //https://www.hackerrank.com/challenges/diagonal-difference/problem?h_r=next-challenge&h_v=zen
+            ////https://www.hackerrank.com/challenges/diagonal-difference/problem?h_r=next-challenge&h_v=zen
 
-            static int diagonalDifference(int[][] arr)
-            {
-                var sumADiagonal = 0;
-                var sumBDiagonal = 0;
-               
+            //static int diagonalDifference(int[][] arr)
+            //{
+            //    var sumADiagonal = 0;
+            //    var sumBDiagonal = 0;
 
-                for(int i = 0; i < arr.Length; i++)
-                {
-                    sumADiagonal += arr[i][i];
-                    sumBDiagonal += arr[((arr.Length - 1) - i)][i];
-                }
-                return Math.Abs(sumADiagonal - sumBDiagonal);
 
-            }
+            //    for(int i = 0; i < arr.Length; i++)
+            //    {
+            //        sumADiagonal += arr[i][i];
+            //        sumBDiagonal += arr[((arr.Length - 1) - i)][i];
+            //    }
+            //    return Math.Abs(sumADiagonal - sumBDiagonal);
 
+            //}
+
+            //static void Main(string[] args)
+            //{
+            //    TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+            //    int n = Convert.ToInt32(Console.ReadLine());
+
+            //    int[][] arr = new int[n][];
+
+            //    for (int i = 0; i < n; i++)
+            //    {
+            //        arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            //    }
+
+            //    int result = diagonalDifference(arr);
+
+            //    textWriter.WriteLine(result);
+
+            //    textWriter.Flush();
+            //    textWriter.Close();
+            //}
+
+
+
+
+
+         //   https://www.hackerrank.com/challenges/30-conditional-statements/problem?h_r=email&unlock_token=2af73adfd8abde4d2641b1b624435338fb7ba546&utm_campaign=30_days_of_code_continuous&utm_medium=email&utm_source=daily_reminder
             static void Main(string[] args)
             {
-                TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+ Console.Write("Enter a number from 1 to 100 : ");
 
-                int n = Convert.ToInt32(Console.ReadLine());
+                int N = Convert.ToInt32(Console.ReadLine());
 
-                int[][] arr = new int[n][];
+                bool even1 = N % 2 == 0;
 
-                for (int i = 0; i < n; i++)
+                if ( even1 == false)
                 {
-                    arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+                    Console.WriteLine("Weird");
+                }
+                else if (even1 == true && N >= 2 && N <= 5)
+                {
+                    Console.WriteLine("Not Weird");
                 }
 
-                int result = diagonalDifference(arr);
+                else if(even1 == true && N >= 6 && N <= 20)
+                {
+                    Console.WriteLine("Weird");
+                }
+                else if (even1 == true && N > 20)
+                {
+                    Console.WriteLine("Not Weird");
+                }
 
-                textWriter.WriteLine(result);
 
-                textWriter.Flush();
-                textWriter.Close();
+
+                Console.ReadKey();
+
             }
+
+
+
+
         }
 
 
