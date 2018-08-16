@@ -443,21 +443,74 @@ namespace JavaScript_Exercises_in_CSharp
 
 
 
-            // https://www.hackerrank.com/challenges/30-loops/problem?h_r=email&unlock_token=575cdf50dea76cf06a564a4943c523eff4f088c8&utm_campaign=30_days_of_code_continuous&utm_medium=email&utm_source=daily_reminder
+            //// https://www.hackerrank.com/challenges/30-loops/problem?h_r=email&unlock_token=575cdf50dea76cf06a564a4943c523eff4f088c8&utm_campaign=30_days_of_code_continuous&utm_medium=email&utm_source=daily_reminder
 
 
-            static void Main(string[] args)
+            //static void Main(string[] args)
+            //{
+            //    int n = Convert.ToInt32(Console.ReadLine());
+
+            //    var i = 1;
+            //    for (i = 1; i <= 10; i++)
+            //    {
+            //        Console.WriteLine("{0} x {1} = {2}", n, i, (n*i));
+
+            //    }
+
+            //}
+
+
+
+
+
+
+            ////https://www.hackerrank.com/challenges/30-operators/problem?h_r=email&unlock_token=575cdf50dea76cf06a564a4943c523eff4f088c8&utm_campaign=30_days_of_code_continuous&utm_medium=email&utm_source=daily_reminder&h_r=next-challenge&h_v=zen
+            //// Complete the solve function below.
+            //static void solve(double meal_cost, int tip_percent, int tax_percent)
+            //{
+            //    var tip = Convert.ToDouble(tip_percent);
+            //    var tax = Convert.ToDouble(tax_percent);
+
+            //    var total = Math.Round(meal_cost + (meal_cost * (tip / 100)) + (meal_cost * (tax / 100)));
+
+            //    int convert = Convert.ToInt32(total);
+
+            //    Console.WriteLine("The total meal cost is " + convert + " dollars.");
+            //Console.ReadKey();
+            //}
+
+            //static void Main(string[] args)
+            //{
+            //    double meal_cost = Convert.ToDouble(Console.ReadLine());
+
+            //    int tip_percent = Convert.ToInt32(Console.ReadLine());
+
+            //    int tax_percent = Convert.ToInt32(Console.ReadLine());
+
+            //    solve(meal_cost, tip_percent, tax_percent);
+            //}
+
+
+
+
+           // https://www.hackerrank.com/challenges/30-review-loop/problem?h_r=next-challenge&h_v=zen
+
+            static void Main(String[] args)
             {
-                int n = Convert.ToInt32(Console.ReadLine());
 
-                var i = 1;
-                for (i = 1; i <= 10; i++)
-                {
-                    Console.WriteLine("{0} x {1} = {2}", n, i, (n*i));
 
-                }
 
             }
+
+
+
+
+
+
+
+
+
+
 
         }
     }
