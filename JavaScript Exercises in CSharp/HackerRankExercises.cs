@@ -344,7 +344,7 @@ namespace JavaScript_Exercises_in_CSharp
             //        double pos = 0;
             //        double neg = 0;
             //        double z = 0;
-            //        var res = new Array[1];
+            //        var res = new Array[1]; //did I ever use this line????
 
             //        for (int i = 0; i < arr.Length;  i++)
             //            if (arr[i] > 0)
@@ -495,15 +495,90 @@ namespace JavaScript_Exercises_in_CSharp
 
            // https://www.hackerrank.com/challenges/30-review-loop/problem?h_r=next-challenge&h_v=zen
 
-            static void Main(String[] args)
+
+static void oddEven(int n, int[] arr)
             {
 
 
 
+
+                Console.WriteLine("");
+
+                Console.ReadKey();
             }
 
+            static void Main(String[] args)
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+
+                int[][] jaggedArray = new int[n][];
+
+                int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+                   
+
+                
+                
+
+                oddEven(n, arr);
+
+            }
+
+            //////C# solution???
+    ////        int T = Convert.ToInt32(Console.ReadLine());
+    ////        string[] s1 = new string[T];
+
+    ////        int i = 0;    
+    ////    while(i<T)
+    ////    {
+    ////        string s = Console.ReadLine();
+    ////        s1[i++] = s;            
+    ////    }
+
+    ////    i = 0;
+    ////    while(i<T)
+    ////    {
+    ////        char[] c1 = s1[i].ToCharArray();
+    ////    string even = "";
+    ////    string odd = "";
+    ////        for (int j = 0; j<c1.Length; j++)
+    ////        {
+    ////            if (j % 2 == 0) even += c1[j];
+    ////            if (j % 2 != 0) odd += c1[j];
+    ////        }
+    ////Console.WriteLine(even +  " " + odd);
+    ////        i++;
+    ////    }
 
 
+            ////////Looks like javascript here
+            //////public static void main(String[] args)
+            //////{
+
+            //////    Scanner scan = new Scanner(System.in);
+            //////    int i = scan.nextInt();
+            //////    scan.nextLine();
+            //////    String[] lines = new String[i];
+
+            //////    for (int j = 0; j < i; j++)
+            //////    {
+
+            //////        lines[j] = scan.nextLine();
+            //////        char[] characters = lines[j].toCharArray();
+
+            //////        for (int k = 0; k < lines[j].length(); k += 2)
+            //////        {
+            //////            System.out.print(characters[k]);
+            //////        }
+            //////        System.out.print(" ");
+
+            //////        for (int k = 1; k < lines[j].length(); k += 2)
+            //////        {
+            //////            System.out.print(characters[k]);
+            //////        }
+            //////        System.out.println();
+            //////    }
+            //////    scan.close();
+            //////}
 
 
 
