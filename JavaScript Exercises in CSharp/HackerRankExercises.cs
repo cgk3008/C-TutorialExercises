@@ -493,62 +493,66 @@ namespace JavaScript_Exercises_in_CSharp
 
 
 
-           // https://www.hackerrank.com/challenges/30-review-loop/problem?h_r=next-challenge&h_v=zen
+            // https://www.hackerrank.com/challenges/30-review-loop/problem?h_r=next-challenge&h_v=zen
 
 
-static void oddEven(int n, int[] arr)
+            //////static void oddEven(int n, int[] arr)
+            //////            {
+
+
+
+
+            //////                Console.WriteLine("");
+
+            //////                Console.ReadKey();
+            //////            }
+
+            //////            static void Main(String[] args)
+            //////            {
+            //////                int n = Convert.ToInt32(Console.ReadLine());
+
+            //////                int[][] jaggedArray = new int[n][];
+
+            //////                int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+
+
+
+
+
+            //////                oddEven(n, arr);
+
+            //////            }
+
+
+            //////C# solution
+
+            static void Main(string[] args)
             {
+                int T = Convert.ToInt32(Console.ReadLine());
+                string[] s1 = new string[T];
 
+                int i = 0;
+                while (i < T)
+                {
+                    string s = Console.ReadLine(); //continues to read the console lines until we reached last line based on first input integer.
+                    s1[i++] = s;
+                }
 
-
-
-                Console.WriteLine("");
-
-                Console.ReadKey();
+                i = 0;
+                while (i < T)
+                {
+                    char[] c1 = s1[i].ToCharArray();
+                    string even = "";
+                    string odd = "";
+                    for (int j = 0; j < c1.Length; j++)
+                    {
+                        if (j % 2 == 0) even += c1[j];
+                        if (j % 2 != 0) odd += c1[j];
+                    }
+                    Console.WriteLine(even + " " + odd);
+                    i++;
+                }
             }
-
-            static void Main(String[] args)
-            {
-                int n = Convert.ToInt32(Console.ReadLine());
-
-                int[][] jaggedArray = new int[n][];
-
-                int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-                   
-
-                
-                
-
-                oddEven(n, arr);
-
-            }
-
-            //////C# solution???
-    ////        int T = Convert.ToInt32(Console.ReadLine());
-    ////        string[] s1 = new string[T];
-
-    ////        int i = 0;    
-    ////    while(i<T)
-    ////    {
-    ////        string s = Console.ReadLine();
-    ////        s1[i++] = s;            
-    ////    }
-
-    ////    i = 0;
-    ////    while(i<T)
-    ////    {
-    ////        char[] c1 = s1[i].ToCharArray();
-    ////    string even = "";
-    ////    string odd = "";
-    ////        for (int j = 0; j<c1.Length; j++)
-    ////        {
-    ////            if (j % 2 == 0) even += c1[j];
-    ////            if (j % 2 != 0) odd += c1[j];
-    ////        }
-    ////Console.WriteLine(even +  " " + odd);
-    ////        i++;
-    ////    }
-
 
             ////////Looks like javascript here
             //////public static void main(String[] args)
@@ -582,6 +586,29 @@ static void oddEven(int n, int[] arr)
 
 
 
+
+
+
+
+            //// https://www.hackerrank.com/challenges/30-arrays/problem
+
+            //static void Main(string[] args)
+            //{
+            //    int n = Convert.ToInt32(Console.ReadLine());
+
+            //    int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+            //    ;
+
+            //    string reverse = "";
+            //    int i = 0;
+            //    for (i = (arr.Length) - 1; i >= 0; i--)
+            //    {
+            //        reverse += arr[i] + " ";
+            //    }
+
+            //    Console.WriteLine(reverse);
+
+            //}
 
 
 
