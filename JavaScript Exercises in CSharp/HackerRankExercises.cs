@@ -526,33 +526,33 @@ namespace JavaScript_Exercises_in_CSharp
 
             //////C# solution
 
-            static void Main(string[] args)
-            {
-                int T = Convert.ToInt32(Console.ReadLine());
-                string[] s1 = new string[T];
+            //static void Main(string[] args)
+            //{
+            //    int T = Convert.ToInt32(Console.ReadLine());
+            //    string[] s1 = new string[T];
 
-                int i = 0;
-                while (i < T)
-                {
-                    string s = Console.ReadLine(); //continues to read the console lines until we reached last line based on first input integer.
-                    s1[i++] = s;
-                }
+            //    int i = 0;
+            //    while (i < T)
+            //    {
+            //        string s = Console.ReadLine(); //continues to read the console lines until we reached last line based on first input integer.
+            //        s1[i++] = s;
+            //    }
 
-                i = 0;
-                while (i < T)
-                {
-                    char[] c1 = s1[i].ToCharArray();
-                    string even = "";
-                    string odd = "";
-                    for (int j = 0; j < c1.Length; j++)
-                    {
-                        if (j % 2 == 0) even += c1[j];
-                        if (j % 2 != 0) odd += c1[j];
-                    }
-                    Console.WriteLine(even + " " + odd);
-                    i++;
-                }
-            }
+            //    i = 0;
+            //    while (i < T)
+            //    {
+            //        char[] c1 = s1[i].ToCharArray();
+            //        string even = "";
+            //        string odd = "";
+            //        for (int j = 0; j < c1.Length; j++)
+            //        {
+            //            if (j % 2 == 0) even += c1[j];
+            //            if (j % 2 != 0) odd += c1[j];
+            //        }
+            //        Console.WriteLine(even + " " + odd);
+            //        i++;
+            //    }
+            //}
 
             ////////Looks like javascript here
             //////public static void main(String[] args)
@@ -607,13 +607,113 @@ namespace JavaScript_Exercises_in_CSharp
             //    }
 
             //    Console.WriteLine(reverse);
+            //               Console.ReadKey();
 
             //}
 
 
 
 
+            //// https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN&view=netframework-4.7.2
+            //static void Main(string[] args)
+            //{           
+            //    //English to spanish dictionary
 
+            //    Dictionary<string, string> translateEnglishToSpanish = new Dictionary<string, string>();
+
+            //    //Adding elements to dictonary, no duplicate "Keys" (first values), but some duplicate "Values" (second value/input)
+            //    translateEnglishToSpanish.Add("I'm sorry", "Lo siento");
+            //    translateEnglishToSpanish.Add("bathroom", "bano");
+            //    translateEnglishToSpanish.Add("Monday", "Lunes");
+            //    translateEnglishToSpanish.Add("Hi", "Hola");
+
+            //    try
+            //    {
+            //        translateEnglishToSpanish.Add("bathroom", "biblioteca");
+            //    }
+            //    catch (ArgumentException)
+            //    {
+            //        Console.WriteLine("An element with Key = \"bathroom\" already exists.");
+            //    }
+
+            //    foreach (KeyValuePair<string, string> kvp in translateEnglishToSpanish)
+            //    {
+            //        Console.WriteLine("Key = {0}, Value = {1}",
+            //                      kvp.Key, kvp.Value);
+
+            //    }
+            //}
+
+
+
+
+            //https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem?h_r=next-challenge&h_v=zen
+
+
+            static void Main(String[] args)
+            {
+                int N = Convert.ToInt32(Console.ReadLine());
+                Dictionary<string, int> phoneBook = new Dictionary<string, int>(N);
+                for (int i = 0; i < N; i++)
+                {
+                    string[] temp = Console.ReadLine().Split(' ');
+                    if (temp[1].Length == 8)
+                    {
+                        phoneBook.Add(temp[0], Convert.ToInt32(temp[1]));
+                    }
+                }
+                string nameToSearch = "";
+                while ((nameToSearch = Console.ReadLine()) != null)
+                {
+                    int flagFound = 0;
+                    if (nameToSearch != "")
+                    {
+                        if (phoneBook.ContainsKey(nameToSearch))
+                        {
+                            flagFound = 1;
+                        }
+                    }
+                    if (flagFound == 1)
+                    {
+                        Console.WriteLine(nameToSearch + "=" + phoneBook[nameToSearch]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not found");
+                    }
+                }
+                Console.ReadKey();
+            }
+
+
+
+
+            //ALMOST CORRECT ALTERNATE SOLUTION
+            //static void Main(String[] args)
+            //{
+            //    int n = Convert.ToInt32(Console.ReadLine());
+            //    var d = new Dictionary<string, string>();
+            //    for (int i = 0; i < n; i++)
+            //    {
+            //        var s = Console.ReadLine().Split(' ');
+            //        d.Add(s[0], s[1]);
+            //    }
+            //    for (int i = 0; i < n; i++)
+            //    {
+            //        var s = Console.ReadLine();
+            //        if (d.ContainsKey(s))
+            //        {
+            //            Console.WriteLine(s + "=" + d[s]);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Not found");
+            //        }
+
+            //        Console.ReadKey();
+
+            //    }
+            //}
         }
     }
 }

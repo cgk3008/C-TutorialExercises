@@ -172,116 +172,51 @@ namespace JavaScript_Exercises_in_CSharp
             //    }
             //}
 
-            static void Main(string[] args)
-            {
+            //static void Main(string[] args)
+            //{
 
 
-                //Console.WriteLine("Enter number from 1 to 10");
+            //    //Console.WriteLine("Enter number from 1 to 10");
 
-                //int number;
-                //number = Convert.ToInt32(Console.ReadLine());
-                //if (number >=1  && number <= 10)
-                //{
-                //    Console.WriteLine("Number is valid");
-                //}
-                //else 
-                //        {
-                //    Console.WriteLine("Invalid number entered");
-                //}
-                //Console.ReadKey();
-
-
-
-
-
-
-                //int number1, number2;
-                //Console.WriteLine("Enter first number");
-                //number1 = Convert.ToInt32(Console.ReadLine());
-
-                //Console.WriteLine("Enter second number");
-                //number2 = Convert.ToInt32(Console.ReadLine());
-
-                //if (number1 > number2)
-                //{
-                //    Console.WriteLine(number1 + " is greater!");
-                //    Console.ReadKey();
-                //}
-                //else if (number2 > number1)
-                //{
-                //    Console.WriteLine(number2 + " is greater!");
-                //    Console.ReadKey();
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Numbers are equal or null!");
-                //    Console.ReadKey();
-                //}
+            //    //int number;
+            //    //number = Convert.ToInt32(Console.ReadLine());
+            //    //if (number >=1  && number <= 10)
+            //    //{
+            //    //    Console.WriteLine("Number is valid");
+            //    //}
+            //    //else 
+            //    //        {
+            //    //    Console.WriteLine("Invalid number entered");
+            //    //}
+            //    //Console.ReadKey();
 
 
 
 
 
 
+            //    //int number1, number2;
+            //    //Console.WriteLine("Enter first number");
+            //    //number1 = Convert.ToInt32(Console.ReadLine());
 
-                //int number1, number2;
-                //Console.WriteLine("Enter width");
-                //number1 = Convert.ToInt32(Console.ReadLine());
+            //    //Console.WriteLine("Enter second number");
+            //    //number2 = Convert.ToInt32(Console.ReadLine());
 
-                //Console.WriteLine("Enter height");
-                //number2 = Convert.ToInt32(Console.ReadLine());
-
-                //if (number1 > number2)
-                //{
-                //    Console.WriteLine("Picture is landscape");
-                //    Console.ReadKey();
-                //}
-                //else if (number2 > number1)
-                //{
-                //    Console.WriteLine(" picture is portrait");
-                //    Console.ReadKey();
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Picture is square or null!");
-                //    Console.ReadKey();
-                //}
-
-
-
-
-
-                //int speedLimit, carSpeed, demerit;
-
-                //Console.WriteLine("enter speed limit");
-                //speedLimit = Convert.ToInt32(Console.ReadLine());
-
-                //Console.WriteLine("Enter car speed");
-
-                //carSpeed = Convert.ToInt32(Console.ReadLine());
-
-                //if (carSpeed <= speedLimit)
-                //{
-                //    Console.WriteLine("Car speed does not exceed speed limit.");
-                //    Console.ReadKey();
-                //}
-                //else if (carSpeed > speedLimit && ((carSpeed-speedLimit)/5 <= 12))
-                //{
-
-                //    demerit = (carSpeed - speedLimit) / 5;
-                //    Console.WriteLine("Car speed exceeds speed limit." + demerit + " demerits have been issued to driver!");
-                //    Console.ReadKey();
-                //}
-                //else if (carSpeed > speedLimit && ((carSpeed - speedLimit) / 5 > 12))
-                //{
-                //    Console.WriteLine("License Suspended!");
-                //    Console.ReadKey();
-                //}
-                //else
-                //{
-                //    Console.WriteLine("inputs are negative or null, re-enter input");
-                //    Console.ReadKey();
-                //}
+            //    //if (number1 > number2)
+            //    //{
+            //    //    Console.WriteLine(number1 + " is greater!");
+            //    //    Console.ReadKey();
+            //    //}
+            //    //else if (number2 > number1)
+            //    //{
+            //    //    Console.WriteLine(number2 + " is greater!");
+            //    //    Console.ReadKey();
+            //    //}
+            //    //else
+            //    //{
+            //    //    Console.WriteLine("Numbers are equal or null!");
+            //    //    Console.ReadKey();
+            //    //}
 
 
 
@@ -289,11 +224,116 @@ namespace JavaScript_Exercises_in_CSharp
 
 
 
+            //    //int number1, number2;
+            //    //Console.WriteLine("Enter width");
+            //    //number1 = Convert.ToInt32(Console.ReadLine());
+
+            //    //Console.WriteLine("Enter height");
+            //    //number2 = Convert.ToInt32(Console.ReadLine());
+
+            //    //if (number1 > number2)
+            //    //{
+            //    //    Console.WriteLine("Picture is landscape");
+            //    //    Console.ReadKey();
+            //    //}
+            //    //else if (number2 > number1)
+            //    //{
+            //    //    Console.WriteLine(" picture is portrait");
+            //    //    Console.ReadKey();
+            //    //}
+            //    //else
+            //    //{
+            //    //    Console.WriteLine("Picture is square or null!");
+            //    //    Console.ReadKey();
+            //    //}
 
 
 
 
-            }
+
+            //    //int speedLimit, carSpeed, demerit;
+
+            //    //Console.WriteLine("enter speed limit");
+            //    //speedLimit = Convert.ToInt32(Console.ReadLine());
+
+            //    //Console.WriteLine("Enter car speed");
+
+            //    //carSpeed = Convert.ToInt32(Console.ReadLine());
+
+            //    //if (carSpeed <= speedLimit)
+            //    //{
+            //    //    Console.WriteLine("Car speed does not exceed speed limit.");
+            //    //    Console.ReadKey();
+            //    //}
+            //    //else if (carSpeed > speedLimit && ((carSpeed-speedLimit)/5 <= 12))
+            //    //{
+
+            //    //    demerit = (carSpeed - speedLimit) / 5;
+            //    //    Console.WriteLine("Car speed exceeds speed limit." + demerit + " demerits have been issued to driver!");
+            //    //    Console.ReadKey();
+            //    //}
+            //    //else if (carSpeed > speedLimit && ((carSpeed - speedLimit) / 5 > 12))
+            //    //{
+            //    //    Console.WriteLine("License Suspended!");
+            //    //    Console.ReadKey();
+            //    //}
+            //    //else
+            //    //{
+            //    //    Console.WriteLine("inputs are negative or null, re-enter input");
+            //    //    Console.ReadKey();
+            //    //}
+
+
+
+            //    //var numbers = new int[] { 1, 2, 3, 4 };
+
+            //    //foreach(var number in numbers)
+            //    //{
+            //    //    Console.WriteLine(number);
+            //    //    Console.ReadKey();
+            //    //}
+
+
+            //    //while (true)
+            //    //{
+            //    //    Console.Write("Type your name: ");
+            //    //    var input = Console.ReadLine();
+
+            //    //    if (String.IsNullOrWhiteSpace(input))
+            //    //        break;
+
+            //    //    Console.WriteLine("@Echo: " + input);
+            //    //    Console.ReadKey();
+            //    //}
+
+
+
+
+
+
+            //    //while (true)
+            //    //{
+            //    //    Console.Write("Type your name: ");
+            //    //    var input = Console.ReadLine();
+
+            //    //    if (!String.IsNullOrWhiteSpace(input)) ///note not operator "!"
+            //    //    {
+
+            //    //        Console.WriteLine("@Echo: " + input);
+            //    //        continue;
+            //    //    }
+                    
+            //    //    break;
+
+
+            //    //}
+
+
+
+
+
+
+            //}
 
         }
 
