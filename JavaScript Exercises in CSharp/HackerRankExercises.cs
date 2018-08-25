@@ -647,43 +647,43 @@ namespace JavaScript_Exercises_in_CSharp
 
 
 
-            //https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem?h_r=next-challenge&h_v=zen
+            ////https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem?h_r=next-challenge&h_v=zen
 
 
-            static void Main(String[] args)
-            {
-                int N = Convert.ToInt32(Console.ReadLine());
-                Dictionary<string, int> phoneBook = new Dictionary<string, int>(N);
-                for (int i = 0; i < N; i++)
-                {
-                    string[] temp = Console.ReadLine().Split(' ');
-                    if (temp[1].Length == 8)
-                    {
-                        phoneBook.Add(temp[0], Convert.ToInt32(temp[1]));
-                    }
-                }
-                string nameToSearch = "";
-                while ((nameToSearch = Console.ReadLine()) != null)
-                {
-                    int flagFound = 0;
-                    if (nameToSearch != "")
-                    {
-                        if (phoneBook.ContainsKey(nameToSearch))
-                        {
-                            flagFound = 1;
-                        }
-                    }
-                    if (flagFound == 1)
-                    {
-                        Console.WriteLine(nameToSearch + "=" + phoneBook[nameToSearch]);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Not found");
-                    }
-                }
-                Console.ReadKey();
-            }
+            //static void Main(String[] args)
+            //{
+            //    int N = Convert.ToInt32(Console.ReadLine());
+            //    Dictionary<string, int> phoneBook = new Dictionary<string, int>(N);
+            //    for (int i = 0; i < N; i++)
+            //    {
+            //        string[] temp = Console.ReadLine().Split(' ');
+            //        if (temp[1].Length == 8)
+            //        {
+            //            phoneBook.Add(temp[0], Convert.ToInt32(temp[1]));
+            //        }
+            //    }
+            //    string nameToSearch = "";
+            //    while ((nameToSearch = Console.ReadLine()) != null)
+            //    {
+            //        int flagFound = 0;
+            //        if (nameToSearch != "")
+            //        {
+            //            if (phoneBook.ContainsKey(nameToSearch))
+            //            {
+            //                flagFound = 1;
+            //            }
+            //        }
+            //        if (flagFound == 1)
+            //        {
+            //            Console.WriteLine(nameToSearch + "=" + phoneBook[nameToSearch]);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Not found");
+            //        }
+            //    }
+            //    Console.ReadKey();
+            //}
 
 
 
@@ -714,6 +714,81 @@ namespace JavaScript_Exercises_in_CSharp
 
             //    }
             //}
+
+            //https://www.hackerrank.com/challenges/30-binary-numbers/problem?h_r=next-challenge&h_v=zen
+
+            //static void Main(string[] args)
+            //{
+            //    int n = Convert.ToInt32(Console.ReadLine());
+
+
+            //    string binary = Convert.ToString(n, 2);
+
+            //    string[] arr = binary.Split('0').ToArray();
+
+            //    var maxOnes = arr.Select(x =>x.Length).Max();                
+               
+            //    Console.WriteLine(maxOnes);
+
+            //    Console.ReadKey();
+
+            //}
+
+
+
+
+            //ANOTHER SOLUTION
+            static void Main(String[] args)
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                int Quotient = n;
+                int Remainder = 0;
+                string BinaryValue = "";
+
+
+                while (Quotient > 0)
+                {
+                    Remainder = Quotient % 2;
+                    BinaryValue = Remainder.ToString() + BinaryValue;
+                    Quotient = Quotient / 2;
+                }
+                Console.WriteLine(CheckConsecutive(BinaryValue));
+
+                Console.ReadKey();
+            }
+
+            static string CheckConsecutive(string BinValue)
+            {
+
+                int HighestConsecutive = 0;
+                int CurrentConsecutive = 0;
+                for (int i = 0; i < BinValue.Length; i++)
+                {
+                    if (BinValue.Substring(i, 1) == "1" && i != BinValue.Length - 1)
+                    {
+                        CurrentConsecutive++;
+                    }
+                    else
+                    {
+                        if (i == BinValue.Length - 1 && BinValue.Substring(i, 1) == "1")
+                        {
+                            CurrentConsecutive++;
+                        }
+                        if (CurrentConsecutive > HighestConsecutive)
+                        {
+                            HighestConsecutive = CurrentConsecutive;
+                        }
+                        CurrentConsecutive = 0;
+                    }
+                }
+                return HighestConsecutive.ToString();
+            }
+
+
+
+
+
+
         }
     }
 }
