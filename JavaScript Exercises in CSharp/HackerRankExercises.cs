@@ -727,7 +727,7 @@ namespace JavaScript_Exercises_in_CSharp
             //    string[] arr = binary.Split('0').ToArray();
 
             //    var maxOnes = arr.Select(x =>x.Length).Max();                
-               
+
             //    Console.WriteLine(maxOnes);
 
             //    Console.ReadKey();
@@ -737,56 +737,108 @@ namespace JavaScript_Exercises_in_CSharp
 
 
 
-            //ANOTHER SOLUTION
-            static void Main(String[] args)
+            ////ANOTHER SOLUTION
+            //static void Main(String[] args)
+            //{
+            //    int n = Convert.ToInt32(Console.ReadLine());
+            //    int Quotient = n;
+            //    int Remainder = 0;
+            //    string BinaryValue = "";
+
+
+            //    while (Quotient > 0)
+            //    {
+            //        Remainder = Quotient % 2;
+            //        BinaryValue = Remainder.ToString() + BinaryValue;
+            //        Quotient = Quotient / 2;
+            //    }
+            //    Console.WriteLine(CheckConsecutive(BinaryValue));
+
+            //    Console.ReadKey();
+            //}
+
+            //static string CheckConsecutive(string BinValue)
+            //{
+
+            //    int HighestConsecutive = 0;
+            //    int CurrentConsecutive = 0;
+            //    for (int i = 0; i < BinValue.Length; i++)
+            //    {
+            //        if (BinValue.Substring(i, 1) == "1" && i != BinValue.Length - 1)
+            //        {
+            //            CurrentConsecutive++;
+            //        }
+            //        else
+            //        {
+            //            if (i == BinValue.Length - 1 && BinValue.Substring(i, 1) == "1")
+            //            {
+            //                CurrentConsecutive++;
+            //            }
+            //            if (CurrentConsecutive > HighestConsecutive)
+            //            {
+            //                HighestConsecutive = CurrentConsecutive;
+            //            }
+            //            CurrentConsecutive = 0;
+            //        }
+            //    }
+            //    return HighestConsecutive.ToString();
+            //}
+
+
+
+
+
+
+
+            //https://www.hackerrank.com/challenges/30-2d-arrays/problem
+
+            static void Main(string[] args)
             {
-                int n = Convert.ToInt32(Console.ReadLine());
-                int Quotient = n;
-                int Remainder = 0;
-                string BinaryValue = "";
+                int[][] arr = new int[6][];
 
-
-                while (Quotient > 0)
+                for (int i = 0; i < 6; i++)
                 {
-                    Remainder = Quotient % 2;
-                    BinaryValue = Remainder.ToString() + BinaryValue;
-                    Quotient = Quotient / 2;
+                    arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
                 }
-                Console.WriteLine(CheckConsecutive(BinaryValue));
 
+                //int[] sum = new int[16];
+                //int h = 0;
+                //for (int i = 0; i < 4; i++)
+                //{
+                //    for (int j = 0; j < 4; j++)
+                //    {
+                //        sum[h] = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
+                //                + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1]
+                //                + arr[i + 2][j + 2];
+                //        h++;
+                //    }
+                //}
+                //Array.Sort(sum);
+                //Console.WriteLine(sum[15]);
+                //Console.ReadKey();
+
+
+
+                int sum = 0;
+                int sumTemp = 0;
+                for (int i = 0; i < 4; i++)
+                {
+                    for (int j = 0; j < 4; j++)
+                    {
+                        sumTemp = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
+                                + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1]
+                                + arr[i + 2][j + 2];
+                        if (sumTemp > sum) { sum = sumTemp; }//this will keep sum up to date
+                    }
+                }
+               
+                Console.WriteLine(sum);
                 Console.ReadKey();
+
+
+
+
             }
-
-            static string CheckConsecutive(string BinValue)
-            {
-
-                int HighestConsecutive = 0;
-                int CurrentConsecutive = 0;
-                for (int i = 0; i < BinValue.Length; i++)
-                {
-                    if (BinValue.Substring(i, 1) == "1" && i != BinValue.Length - 1)
-                    {
-                        CurrentConsecutive++;
-                    }
-                    else
-                    {
-                        if (i == BinValue.Length - 1 && BinValue.Substring(i, 1) == "1")
-                        {
-                            CurrentConsecutive++;
-                        }
-                        if (CurrentConsecutive > HighestConsecutive)
-                        {
-                            HighestConsecutive = CurrentConsecutive;
-                        }
-                        CurrentConsecutive = 0;
-                    }
-                }
-                return HighestConsecutive.ToString();
-            }
-
-
-
-
 
 
         }
