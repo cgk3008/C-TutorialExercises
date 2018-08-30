@@ -364,7 +364,7 @@ namespace JavaScript_Exercises_in_CSharp
             ////        //Console.WriteLine(password);//empty line,to start code below on a new line
             ////        Console.WriteLine(password2);
             ////    }
-              
+
 
 
             ////    Console.ReadKey();
@@ -375,24 +375,94 @@ namespace JavaScript_Exercises_in_CSharp
 
 
 
-            
-//1- Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder.Display the count on the console.
+
+            ////1- Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder.Display the count on the console.
+
+            //            static void Main(string[] args)
+            //            {
+            //                int count = 0;
+            //                for(var i =0; i<101; i++)
+            //                {
+            //                    if(i % 3 == 0)
+            //                    {
+            //                        count += 1;
+            //                    }
+            //                }
+
+            //                Console.WriteLine(count);
+            //                Console.ReadKey();
+
+            //            }
+
+
+            //2- Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
+
+            //SOLUTION BELOW NOT WORKING
+            //////static void Main(string[] args)
+            //////{
+
+
+            //////    Console.WriteLine("Enter number and repeat. Type 'ok' to exit and sum numbers");
+
+            //////    int n = 0;
+            //////    while(Console.ReadLine() != "ok" || Console.ReadLine() != null)
+
+            //////    {
+            //////        int input = Convert.ToInt32(Console.ReadLine());
+            //////        n += input;
+            //////    }
+
+            //////    Console.WriteLine(n);
+            //////    Console.ReadKey();
+            //////}
+
+            static void Main(string[] args)
+            {
+
+
+                int sum = 0;
+
+
+                bool okCheck = true;
+
+                while (okCheck == true)
+                {
+                    Console.WriteLine("enter number or 'ok' to exit");
+                    var input = Console.ReadLine();
+
+                    if (input == "ok")
+                    {
+                        okCheck = false;
+                        Console.WriteLine("ok check is now false");
+
+                    }
+                    else
+                    {
+                       var inputNumber = Convert.ToInt32(input);
+                        sum += inputNumber;
+
+                    }
+                   
+
+                }
+                Console.WriteLine("Sum of numbers is below");
+                Console.WriteLine(sum);
+                Console.ReadKey();
+
+            }
 
 
 
-//2- Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
+
+            //3- Write a program and ask the user to enter a number.Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
 
 
 
-//3- Write a program and ask the user to enter a number.Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
+            //4- Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number.If the user guesses the number, display “You won"; otherwise, display “You lost". (To make sure the program is behaving correctly, you can display the secret number on the console first.)
 
 
 
-//4- Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number.If the user guesses the number, display “You won"; otherwise, display “You lost". (To make sure the program is behaving correctly, you can display the secret number on the console first.)
-
-
-
-//5- Write a program and ask the user to enter a series of numbers separated by comma.Find the maximum of the numbers and display it on the console.For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.
+            //5- Write a program and ask the user to enter a series of numbers separated by comma.Find the maximum of the numbers and display it on the console.For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.
 
 
 

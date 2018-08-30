@@ -792,53 +792,111 @@ namespace JavaScript_Exercises_in_CSharp
 
             //https://www.hackerrank.com/challenges/30-2d-arrays/problem
 
-            static void Main(string[] args)
-            {
-                int[][] arr = new int[6][];
+            //static void Main(string[] args)
+            //{
+            //    int[][] arr = new int[6][];
 
-                for (int i = 0; i < 6; i++)
-                {
-                    arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-                }
+            //    for (int i = 0; i < 6; i++)
+            //    {
+            //        arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            //    }
 
-                //int[] sum = new int[16];
-                //int h = 0;
-                //for (int i = 0; i < 4; i++)
-                //{
-                //    for (int j = 0; j < 4; j++)
+            //int[] sum = new int[16];
+            //int h = -64;
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    for (int j = 0; j < 4; j++)
+            //    {
+            //        sum[h] = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
+            //                + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1]
+            //                + arr[i + 2][j + 2];
+            //        h++;
+            //    }
+            //}
+            //Array.Sort(sum);
+            //Console.WriteLine(sum[15]);
+            //Console.ReadKey();
+
+
+            ////slightly different solution
+            //// OMG HAD TO PUT SPACES IN INPUT!!!! NEXT TIME COPY SAMPLE INPUT OR AT LEAST CHECK IF THERE ARE SPACES!!!
+            //static void Main(string[] args)
+            //{
+            //    int[][] arr = new int[6][];
+
+            //    for (int i = 0; i < 6; i++)
+            //    {
+            //        arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            //    }
+            //    int sum = -64;
+            //    int sumTemp = 0;
+            //    for (int i = 0; i < 4; i++)
+            //    {
+            //        for (int j = 0; j < 4; j++)
+            //        {
+            //            sumTemp = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
+            //                    + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1]
+            //                    + arr[i + 2][j + 2];
+            //            if (sumTemp > sum)
+            //            {
+            //                sum = sumTemp;
+            //            }//this will keep sum up to date
+            //        }
+            //    }
+
+            //    Console.WriteLine(sum);
+            //    Console.ReadKey();
+
+
+
+
+
+
+
+                //////another solution, Javascript ok avoid i guess
+
+                //function main()
                 //    {
-                //        sum[h] = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
-                //                + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1]
-                //                + arr[i + 2][j + 2];
-                //        h++;
+                //        var arr = [];
+                //        for (arr_i = 0; arr_i < 6; arr_i++)
+                //        {
+                //            arr[arr_i] = readLine().split(' ');
+                //            arr[arr_i] = arr[arr_i].map(Number);
+                //        }
+
+                //        //setting highestSum initially to -63 because that is lowest possible outcome for hourglass.
+                //        //-9 -9 -9
+                //        //   -9
+                //        //-9 -9 -9
+                //        // = -63
+                //        var highestSum = -63;
+                //        var tempSum = 0;
+                //        for (let i = 0; i < 4; i++)
+                //        {
+                //            for (let j = 0; j < 4; j++)
+                //            {
+                //                tempSum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
+                //                if (tempSum > highestSum)
+                //                {
+                //                    highestSum = tempSum;
+                //                }
+                //            }
+                //        }
+
+                //        console.log(highestSum);
                 //    }
-                //}
-                //Array.Sort(sum);
-                //Console.WriteLine(sum[15]);
-                //Console.ReadKey();
-
-
-
-                int sum = 0;
-                int sumTemp = 0;
-                for (int i = 0; i < 4; i++)
-                {
-                    for (int j = 0; j < 4; j++)
-                    {
-                        sumTemp = arr[i][j] + arr[i][j + 1] + arr[i][j + 2]
-                                + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1]
-                                + arr[i + 2][j + 2];
-                        if (sumTemp > sum) { sum = sumTemp; }//this will keep sum up to date
-                    }
-                }
-               
-                Console.WriteLine(sum);
-                Console.ReadKey();
 
 
 
 
-            }
+
+
+
+
+
+
+
+            
 
 
         }
