@@ -45,6 +45,7 @@
     <Compile Include="Button.cs" />
     <Compile Include="EqualityComparisons.cs" />
     <Compile Include="Food.cs" />
+    <Compile Include="HackerRank2.cs" />
     <Compile Include="HackerRankExercises.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

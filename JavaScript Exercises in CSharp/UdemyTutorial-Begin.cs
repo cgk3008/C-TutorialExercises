@@ -416,53 +416,265 @@ namespace JavaScript_Exercises_in_CSharp
             //////    Console.ReadKey();
             //////}
 
-            static void Main(string[] args)
-            {
+            //static void Main(string[] args)
+            //{
 
 
-                int sum = 0;
+            //    int sum = 0;
 
 
-                bool okCheck = true;
+            //    bool okCheck = true;
 
-                while (okCheck == true)
-                {
-                    Console.WriteLine("enter number or 'ok' to exit");
-                    var input = Console.ReadLine();
+            //    while (okCheck == true)
+            //    {
+            //        Console.WriteLine("enter number or 'ok' to exit");
+            //        var input = Console.ReadLine();
 
-                    if (input == "ok")
-                    {
-                        okCheck = false;
-                        Console.WriteLine("ok check is now false");
+            //        if (input == "ok")
+            //        {
+            //            okCheck = false;
+            //            Console.WriteLine("ok check is now false");
 
-                    }
-                    else
-                    {
-                       var inputNumber = Convert.ToInt32(input);
-                        sum += inputNumber;
+            //        }
+            //        else
+            //        {
+            //           var inputNumber = Convert.ToInt32(input);
+            //            sum += inputNumber;
 
-                    }
+            //        }
                    
 
-                }
-                Console.WriteLine("Sum of numbers is below");
-                Console.WriteLine(sum);
-                Console.ReadKey();
+            //    }
+            //    Console.WriteLine("Sum of numbers is below");
+            //    Console.WriteLine(sum);
+            //    Console.ReadKey();
 
-            }
+            //}
 
 
 
 
             //3- Write a program and ask the user to enter a number.Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
 
+            //    static void Main(string[] args)
+            //{
+
+            //    Console.WriteLine("Enter a number to compute factorial");
+
+                
+            //    var input = Console.ReadLine();
+
+            //    int factorial = Convert.ToInt32(input);
+                
+            //    if (factorial ==0 || factorial == 1)
+            //    {
+            //        Console.WriteLine(factorial + "! = 1");
+            //    }
+
+            //    for (var i = factorial - 1; i > 0; i--)
+            //    {
+            //        factorial *= i;
+            //    }
+
+            //    Console.WriteLine(input + "! = " + factorial);
+            //    Console.ReadKey();
+            //}
 
 
-            //4- Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number.If the user guesses the number, display “You won"; otherwise, display “You lost". (To make sure the program is behaving correctly, you can display the secret number on the console first.)
+
+//            //4- Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number.If the user guesses the number, display “You won"; otherwise, display “You lost". (To make sure the program is behaving correctly, you can display the secret number on the console first.)
+
+//            static void Main(string[] args)
+//            {
+//                Random random = new Random();
+//                int generatedNUmber = random.Next(1, 10);
+
+//                Console.WriteLine(generatedNUmber);
+
+//                Console.WriteLine("Guess a number between 1 and 10");
+
+//                for (int i = 0; i < 100; i++)
+//                {
+
+//                    var guess = Convert.ToInt32(Console.ReadLine());
+
+//                    if (guess > 10 || guess < 1)
+//                    {
+//                        Console.WriteLine("Number outside of range");
+//                    }
+
+//                    if (guess == generatedNUmber)
+//                    {
+//                        Console.WriteLine("You guessed correctly! You win!");
+//break;
+//                    }
+
+//                    else
+//                    {
+//                        Console.WriteLine("Guess again");
+//                    }
+//                }
+//                Console.ReadKey();
+//            }
 
 
 
             //5- Write a program and ask the user to enter a series of numbers separated by comma.Find the maximum of the numbers and display it on the console.For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.
+
+            //static void Main(string[] args)
+            //{
+
+            //    Console.WriteLine("Enter a series of numbers separated by commas");
+
+            //    int[] arr = Array.ConvertAll(Console.ReadLine().Split(','), arrTemp => Convert.ToInt32(arrTemp));
+
+            //    Console.WriteLine(arr.Max());
+
+            //    Console.ReadKey();
+
+
+            //}
+
+
+
+
+
+            //    //// ARRAYS!
+            //static void Main(string[] args)
+            //{
+            //    var numbers = new[] { 3, 7, 9, 2, 14, 6 };
+
+            //    //Length
+            //    Console.WriteLine("Length: " + numbers.Length);
+
+            //    //IndexOf()
+            //   var index =  Array.IndexOf(numbers, 9);
+
+            //    Console.WriteLine("Index of 9: " + index);
+
+            //    //Clear Method
+            //    Array.Clear(numbers, 0, 2);
+
+            //    Console.WriteLine("Effect of Clear()");
+            //    foreach (var n in numbers)
+            //        Console.WriteLine(n);
+
+
+            //    //Copy()
+            //    int[] another = new int[3];
+            //    Array.Copy(numbers, another, 3);
+            //    Console.WriteLine("Effect of Copy()");
+            //    foreach (var n in another)
+            //        Console.WriteLine(n);
+
+
+            //    //Sort()
+            //    Array.Sort(numbers);
+            //    Console.WriteLine("Effect of Sort()");
+            //    foreach (var n in numbers)
+            //        Console.WriteLine(n);
+
+
+            //    //Reverse()
+            //    Array.Reverse(numbers);
+            //    Console.WriteLine("Effect of Reverse()");
+            //    foreach (var n in numbers)
+            //        Console.WriteLine(n);
+
+
+            //    Console.ReadKey();
+            //}
+
+
+
+            //// LISTS!   Generic lists
+
+            //static void Main(string[] args)
+            //{
+            //    var numbers = new List<int>() {  1, 2, 3, 4 };
+
+            //    numbers.Add(1);
+            //    numbers.AddRange(new int[3] { 5, 6, 7 });
+
+            //    foreach (var number in numbers)
+            //        Console.WriteLine(number);
+
+
+            //    //IndexOf()
+            //    Console.WriteLine();
+            //    Console.WriteLine("Index of 1: " + numbers.IndexOf(1));
+            //    Console.WriteLine("Last index of 1: " + numbers.LastIndexOf(1));
+
+            //    Console.WriteLine("Count: " + numbers.Count);
+
+            //    numbers.Remove(1);
+            //    foreach (var number in numbers)
+            //        Console.WriteLine(number);
+
+
+
+
+            //    //// CANNOT MODIFY COLLECTION IN FOREACH LOOP, SO USE FOR LOOP!!!
+            //    //foreach (var number in numbers)
+            //    //{
+            //    //    if (number == 1)
+            //    //        numbers.Remove(number);
+            //    //}
+
+            //    //foreach (var number in numbers)
+            //    //    Console.WriteLine(number);
+            //    Console.WriteLine();
+            //    for ( var i =0; i < numbers.Count; i++)
+            //    {
+            //        if (numbers[i] == 1)
+            //            numbers.Remove(numbers[i]);
+
+            //    }
+
+            //    foreach (var number in numbers)
+            //        Console.WriteLine(number);
+
+
+            //    Console.WriteLine();
+            //    numbers.Clear();
+            //    Console.WriteLine("Count: " + numbers.Count);
+
+
+            //    Console.ReadKey();
+            //}
+
+
+            ////            Exercises
+            ////Section 6, Lecture 56
+            ////Note: For any of these exercises, ignore input validation unless otherwise directed.Assume the user enters values in the format that the program expects.
+
+
+
+            ////1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
+
+            ////If no one likes your post, it doesn't display anything.
+            ////If only one person likes your post, it displays: [Friend's Name] likes your post.
+            ////If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
+            ////If more than two people like your post, it displays: [Friend 1], [Friend 2] and[Number of Other People] others like your post.
+            ////Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
+
+
+
+            ////2- Write a program and ask the user to enter their name.Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
+
+
+
+            ////3- Write a program and ask the user to enter 5 numbers.If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+
+
+
+            ////4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates.Display the unique numbers that the user has entered.
+
+
+
+            ////5- Write a program and ask the user to supply a list of comma separated numbers (e.g 5, 1, 9, 2, 10). If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; otherwise, display the 3 smallest numbers in the list.
+
+
 
 
 
