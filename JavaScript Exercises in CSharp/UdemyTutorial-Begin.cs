@@ -658,158 +658,216 @@ namespace JavaScript_Exercises_in_CSharp
             ////If more than two people like your post, it displays: [Friend 1], [Friend 2] and[Number of Other People] others like your post.
             ////Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
 
+            //static void Main(string[] args)
+            //{
+
+            //    List<string> input = new List<string>();
+            //    do
+            //    {
+            //        Console.WriteLine(" Enter name for Likes");
+
+            //        input.Add(Console.ReadLine());
+
+            //    }
+
+            //    while (Console.ReadKey(true).Key != ConsoleKey.Enter); // not quite what I wanted, have to enter a non "enter"  key first to repeat the WriteLine code
+
+            //    if (input.Count == 1)
+            //    {
+            //        Console.WriteLine(input[0] + " likes your post.");
+            //    }
+
+            //    else
+            //    {
+
+            //        if (input.Count < 3)
+            //        {
+            //            Console.WriteLine(input[0] + " and " + input[1] + " likes your post.");
+            //        }
+
+            //        else if (input.Count > 2)
+            //        {
+
+            //            Console.WriteLine(input[0] + " and " + input[1] + " " + (input.Count -2) + " other likes your post.");
+            //        }
+
+            //        Console.ReadKey();
+
+            //    }
+
+
+
+
+
+
+            ////2- Write a program and ask the user to enter their name.Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
+
+
+
+            ////3- Write a program and ask the user to enter 5 numbers.If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+
+
+
+            ////4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates.Display the unique numbers that the user has entered.
+
+
+
+            ////5- Write a program and ask the user to supply a list of comma separated numbers (e.g 5, 1, 9, 2, 10). If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; otherwise, display the 3 smallest numbers in the list.
+
+
+
+
+
+            //            static void Main(string[] args)
+            //            {
+
+
+            //                //DateTime objects cannot be changed they are immutable
+
+            ////                Question 2:
+            ////What will be the output of this program?
+
+            ////var dateTime = new DateTime(2015, 1, 1);
+
+            ////                dateTime.AddYears(1);
+
+            ////                Console.WriteLine(dateTime.Year);  ANSWER IS 2015
+
+
+            //                var dateTime = new DateTime(2015, 1, 1);
+            //                    var now = DateTime.Now;
+            //                var today = DateTime.Today;
+
+            //                Console.WriteLine("Hour: " + now.Hour);
+            //                Console.WriteLine("Minute: " + now.Minute);
+
+            //               var tomorrow =  now.AddDays(1);
+
+            //                var yesterday = now.AddDays(-1);
+
+            //                Console.WriteLine(now.ToLongDateString());
+            //                Console.WriteLine(now.ToShortDateString());
+            //                Console.WriteLine(now.ToLongTimeString());
+            //                Console.WriteLine(now.ToShortTimeString());
+
+            //                Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm"));
+
+
+            //                Console.WriteLine("");
+
+            //                //Creating TimeSpan objects
+
+            //                var timeSpan = new TimeSpan(1, 2, 3);
+
+            //                var timeSpan1 = new TimeSpan(1, 0, 0);
+
+            //                var timeSpan2 = TimeSpan.FromHours(1);  // very clean way to represent 1 hour!
+
+            //                var start = DateTime.Now;
+            //                var end = DateTime.Now.AddMinutes(2);
+
+            //                var duration = end - start;
+            //                Console.WriteLine("DUration: " + duration);
+
+            //                //Properties
+            //                Console.WriteLine("Minutes: " + timeSpan.Minutes);
+            //                Console.WriteLine("Total minutes: " + timeSpan.TotalMinutes);
+
+            //                //Add method
+            //                Console.WriteLine("Add example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
+
+            //                //Subtract method
+            //                Console.WriteLine("Subtract example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+
+            //                //ToString method
+            //                Console.WriteLine("ToString " + timeSpan.ToString());
+
+
+            //                //Parse
+            //                Console.WriteLine("Parse " + TimeSpan.Parse("01:02:03"));
+
+            //                var currentYear = DateTime.Now.Year;
+            //                Console.WriteLine(" Current year: " + currentYear);
+
+            //                Console.ReadKey();
+
+            //            }
+
+
+
+
+
+
+
+            // Format Strings
+            //https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+
+            //decimal value = 123.456m;
+            //Console.WriteLine(value.ToString("C2"));
+            //// Displays $123.46
+
             static void Main(string[] args)
             {
+                var fullName = "Cliff Koenig      ";
+                Console.WriteLine("Trim:  '{0}'", fullName.Trim());
+                Console.WriteLine("Trim:  '{0}'", fullName.Trim().ToUpper());
 
-                List<string> input = new List<string>();
-                do
-                {
-                    Console.WriteLine(" Enter name for Likes");
+                var index = fullName.IndexOf(' ');
+                var firstName = fullName.Substring(0, index);
+                var lastName = fullName.Substring(index + 1);
 
-                    input.Add(Console.ReadLine());
+                Console.WriteLine(" First Name: " + firstName);
+                Console.WriteLine("Last Name: " + lastName);
 
-                }
 
-                while (Console.ReadKey(true).Key != ConsoleKey.Enter); // not quite what I wanted, have to enter a non "enter"  key first to repeat the WriteLine code
+                var names = fullName.Split(' ');
+                Console.WriteLine("First Name using split: " + names[0]);
+                Console.WriteLine(" Last Name using split: " + names[1]);
 
-                if (input.Count == 1)
-                {
-                    Console.WriteLine(input[0] + " likes your post.");
-                }
+                Console. WriteLine(fullName.Replace("Cliff", "Clifford"));
+                Console.WriteLine(fullName.Replace('i', 'I'));
 
-                else
-                {
+                if (String.IsNullOrEmpty(null))
+                    Console.WriteLine("INVALID");
 
-                    if (input.Count < 3)
-                    {
-                        Console.WriteLine(input[0] + " and " + input[1] + " likes your post.");
-                    }
+                if (String.IsNullOrEmpty(""))
+                    Console.WriteLine("INVALID NUmber 2");
 
-                    else if (input.Count > 2)
-                    {
+                if (String.IsNullOrEmpty(" ".Trim()))
+                    Console.WriteLine("INVALID NUmber 3");
 
-                        Console.WriteLine(input[0] + " and " + input[1] + " " + (input.Count -2) + " other likes your post.");
-                    }
+                //better isNullorWitespace
+                if (String.IsNullOrWhiteSpace(" "))
+                    Console.WriteLine("INVALID NUmber 4");
 
-                    Console.ReadKey();
+                var str = "25";
+                var age = Convert.ToInt32(str); //no one is older than 256 years
 
-                }
+                //so better is
+                Convert.ToByte(str);
+                Console.WriteLine(age);
 
+                float price = 29.95f;
+                Console.WriteLine(price.ToString("C")); //everything has a ToString method.......
+                Console.WriteLine(price.ToString("C0"));
 
 
-
-
-
-                ////2- Write a program and ask the user to enter their name.Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
-
-
-
-                ////3- Write a program and ask the user to enter 5 numbers.If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
-
-
-
-                ////4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates.Display the unique numbers that the user has entered.
-
-
-
-                ////5- Write a program and ask the user to supply a list of comma separated numbers (e.g 5, 1, 9, 2, 10). If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; otherwise, display the 3 smallest numbers in the list.
-
-
-
-
-
-                //            static void Main(string[] args)
-                //            {
-
-
-                //                //DateTime objects cannot be changed they are immutable
-
-                ////                Question 2:
-                ////What will be the output of this program?
-
-                ////var dateTime = new DateTime(2015, 1, 1);
-
-                ////                dateTime.AddYears(1);
-
-                ////                Console.WriteLine(dateTime.Year);  ANSWER IS 2015
-
-
-                //                var dateTime = new DateTime(2015, 1, 1);
-                //                    var now = DateTime.Now;
-                //                var today = DateTime.Today;
-
-                //                Console.WriteLine("Hour: " + now.Hour);
-                //                Console.WriteLine("Minute: " + now.Minute);
-
-                //               var tomorrow =  now.AddDays(1);
-
-                //                var yesterday = now.AddDays(-1);
-
-                //                Console.WriteLine(now.ToLongDateString());
-                //                Console.WriteLine(now.ToShortDateString());
-                //                Console.WriteLine(now.ToLongTimeString());
-                //                Console.WriteLine(now.ToShortTimeString());
-
-                //                Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm"));
-
-
-                //                Console.WriteLine("");
-
-                //                //Creating TimeSpan objects
-
-                //                var timeSpan = new TimeSpan(1, 2, 3);
-
-                //                var timeSpan1 = new TimeSpan(1, 0, 0);
-
-                //                var timeSpan2 = TimeSpan.FromHours(1);  // very clean way to represent 1 hour!
-
-                //                var start = DateTime.Now;
-                //                var end = DateTime.Now.AddMinutes(2);
-
-                //                var duration = end - start;
-                //                Console.WriteLine("DUration: " + duration);
-
-                //                //Properties
-                //                Console.WriteLine("Minutes: " + timeSpan.Minutes);
-                //                Console.WriteLine("Total minutes: " + timeSpan.TotalMinutes);
-
-                //                //Add method
-                //                Console.WriteLine("Add example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
-
-                //                //Subtract method
-                //                Console.WriteLine("Subtract example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
-
-                //                //ToString method
-                //                Console.WriteLine("ToString " + timeSpan.ToString());
-
-
-                //                //Parse
-                //                Console.WriteLine("Parse " + TimeSpan.Parse("01:02:03"));
-
-                //                var currentYear = DateTime.Now.Year;
-                //                Console.WriteLine(" Current year: " + currentYear);
-
-                //                Console.ReadKey();
-
-                //            }
-
-
-
-
-
-
-
-
-
-
-
-
+                Console.WriteLine("Press any key to continue....");
+                Console.ReadKey();
             }
+
+
+
+
+
+
         }
-
-
-
-
-
     }
+
+
+
+
+
 }
+
+
