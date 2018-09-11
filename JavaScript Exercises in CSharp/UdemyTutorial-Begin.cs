@@ -849,7 +849,7 @@ namespace JavaScript_Exercises_in_CSharp
 
                 float price = 29.95f;
                 Console.WriteLine(price.ToString("C")); //everything has a ToString method.......
-                Console.WriteLine(price.ToString("C0"));
+                Console.WriteLine(price.ToString("C0")); //
 
 
                 Console.WriteLine("Press any key to continue....");
