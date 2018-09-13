@@ -703,6 +703,39 @@ namespace JavaScript_Exercises_in_CSharp
             ////2- Write a program and ask the user to enter their name.Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
 
 
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Enter your name please.");
+
+                var name = Console.ReadLine();
+
+                var reversed = "";
+
+                for ( int i = name.Length - 1; i >=0; i--)
+                {
+                    reversed += name[i];
+
+                }
+
+                Console.WriteLine(reversed);
+
+                //second way to revers using Array method!!
+
+                Console.WriteLine("Enter your name please.");
+                var name2 = Console.ReadLine();
+
+                char[] charArray = name2.ToCharArray();
+                Array.Reverse(charArray);
+                Console.WriteLine(charArray);
+
+
+
+
+                Console.ReadKey();
+            }
+
+
+
 
             ////3- Write a program and ask the user to enter 5 numbers.If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
 
@@ -806,55 +839,163 @@ namespace JavaScript_Exercises_in_CSharp
             //Console.WriteLine(value.ToString("C2"));
             //// Displays $123.46
 
-            static void Main(string[] args)
-            {
-                var fullName = "Cliff Koenig      ";
-                Console.WriteLine("Trim:  '{0}'", fullName.Trim());
-                Console.WriteLine("Trim:  '{0}'", fullName.Trim().ToUpper());
+            //static void Main(string[] args)
+            //{
+            //    var fullName = "Cliff Koenig      ";
+            //    Console.WriteLine("Trim:  '{0}'", fullName.Trim());
+            //    Console.WriteLine("Trim:  '{0}'", fullName.Trim().ToUpper());
 
-                var index = fullName.IndexOf(' ');
-                var firstName = fullName.Substring(0, index);
-                var lastName = fullName.Substring(index + 1);
+            //    var index = fullName.IndexOf(' ');
+            //    var firstName = fullName.Substring(0, index);
+            //    var lastName = fullName.Substring(index + 1);
 
-                Console.WriteLine(" First Name: " + firstName);
-                Console.WriteLine("Last Name: " + lastName);
-
-
-                var names = fullName.Split(' ');
-                Console.WriteLine("First Name using split: " + names[0]);
-                Console.WriteLine(" Last Name using split: " + names[1]);
-
-                Console. WriteLine(fullName.Replace("Cliff", "Clifford"));
-                Console.WriteLine(fullName.Replace('i', 'I'));
-
-                if (String.IsNullOrEmpty(null))
-                    Console.WriteLine("INVALID");
-
-                if (String.IsNullOrEmpty(""))
-                    Console.WriteLine("INVALID NUmber 2");
-
-                if (String.IsNullOrEmpty(" ".Trim()))
-                    Console.WriteLine("INVALID NUmber 3");
-
-                //better isNullorWitespace
-                if (String.IsNullOrWhiteSpace(" "))
-                    Console.WriteLine("INVALID NUmber 4");
-
-                var str = "25";
-                var age = Convert.ToInt32(str); //no one is older than 256 years
-
-                //so better is
-                Convert.ToByte(str);
-                Console.WriteLine(age);
-
-                float price = 29.95f;
-                Console.WriteLine(price.ToString("C")); //everything has a ToString method.......
-                Console.WriteLine(price.ToString("C0")); //
+            //    Console.WriteLine(" First Name: " + firstName);
+            //    Console.WriteLine("Last Name: " + lastName);
 
 
-                Console.WriteLine("Press any key to continue....");
-                Console.ReadKey();
-            }
+            //    var names = fullName.Split(' ');
+            //    Console.WriteLine("First Name using split: " + names[0]);
+            //    Console.WriteLine(" Last Name using split: " + names[1]);
+
+            //    Console. WriteLine(fullName.Replace("Cliff", "Clifford"));
+            //    Console.WriteLine(fullName.Replace('i', 'I'));
+
+            //    if (String.IsNullOrEmpty(null))
+            //        Console.WriteLine("INVALID");
+
+            //    if (String.IsNullOrEmpty(""))
+            //        Console.WriteLine("INVALID NUmber 2");
+
+            //    if (String.IsNullOrEmpty(" ".Trim()))
+            //        Console.WriteLine("INVALID NUmber 3");
+
+            //    //better isNullorWitespace
+            //    if (String.IsNullOrWhiteSpace(" "))
+            //        Console.WriteLine("INVALID NUmber 4");
+
+            //    var str = "25";
+            //    var age = Convert.ToInt32(str); //no one is older than 256 years
+
+            //    //so better is
+            //    Convert.ToByte(str);
+            //    Console.WriteLine(age);
+
+            //    float price = 29.95f;
+            //    Console.WriteLine(price.ToString("C")); //everything has a ToString method.......
+            //    Console.WriteLine(price.ToString("C0")); //
+
+
+            //    Console.WriteLine("Press any key to continue....");
+            //    Console.ReadKey();
+            //}
+
+
+
+
+            //    //https://www.udemy.com/csharp-tutorial-for-beginners/learn/v4/t/lecture/2984168?start=0
+            //    static void Main(string[] args)
+            //    {
+            //        var sentence = "This is going to be a really really really really long text.";
+
+
+            //        var summary = SummarizeText(sentence);
+
+            //        Console.WriteLine(summary);
+
+            //        Console.ReadKey();
+
+            //    }
+            //}
+
+            ////create another method to use the above method repeatedly
+            //static string SummarizeText(string text, int maxLength =25 )
+            //{
+            //    if (text.Length < maxLength)
+            //        return text;
+
+
+            //    text.Substring(0, maxLength); // this is not a good way to do this!
+
+            //    var words = text.Split(' '); // now splitting by spaces!!!
+            //    var totalCharacters = 0;
+            //    var summaryWords = new List<string>();
+
+            //    foreach (var word in words)
+            //    {
+            //        summaryWords.Add(word);
+
+            //        totalCharacters += word.Length + 1; //adding +1 because of the space afetr the word!
+
+            //        if (totalCharacters > maxLength)
+            //            break;
+            //    }
+
+            //   return String.Join(" ", summaryWords) + "...";
+            //}
+
+
+
+            ////https://www.udemy.com/csharp-tutorial-for-beginners/learn/v4/t/lecture/2980852?start=0
+
+            ////StringBUilder can't search strings, just manipulates!
+            //static void Main(string[] args)
+            //{
+            //    var builder = new StringBuilder("Hello World");
+
+            //    builder.Append('-', 10);
+            //    builder.AppendLine();
+            //    builder.Append("Header");
+            //    builder.AppendLine();
+            //    builder.Append('-', 10);
+
+            //    builder
+            //        .Append('-', 10)
+            //    .AppendLine()
+            //    .Append("Header")
+            //    .AppendLine()
+            //    .Append('-', 10);
+
+
+            //    builder.Replace('-', '+');
+
+            //    builder.Remove(0, 10);
+
+            //    builder.Insert(0, new string('-', 10));
+
+            //    Console.WriteLine(builder);
+
+            //    Console.WriteLine("First Character: " + builder[0]);
+
+            //    Console.ReadKey();
+
+
+
+            //}
+
+
+//            1- Write a program and ask the user to enter a few numbers separated by a hyphen.Work out if the numbers are consecutive. For example, if the input is "5-6-7-8-9" or "20-19-18-17-16", display a message: "Consecutive"; otherwise, display "Not Consecutive".
+
+
+
+
+
+
+
+
+//2- Write a program and ask the user to enter a few numbers separated by a hyphen.If the user simply presses Enter, without supplying an input, exit immediately; otherwise, check to see if there are duplicates.If so, display "Duplicate" on the console.
+
+
+
+//3- Write a program and ask the user to enter a time value in the 24-hour time format(e.g. 19:00). A valid time should be between 00:00 and 23:59. If the time is valid, display "Ok"; otherwise, display "Invalid Time". If the user doesn't provide any values, consider it as invalid time. 
+
+
+
+//4- Write a program and ask the user to enter a few words separated by a space.Use the words to create a variable name with PascalCase.For example, if the user types: "number of students", display "NumberOfStudents". Make sure that the program is not dependent on the input.So, if the user types "NUMBER OF STUDENTS", the program should still display "NumberOfStudents".
+
+
+
+//5- Write a program and ask the user to enter an English word. Count the number of vowels (a, e, o, u, i) in the word. So, if the user enters "inadequate", the program should display 6 on the console.
+
 
 
 
@@ -862,12 +1003,12 @@ namespace JavaScript_Exercises_in_CSharp
 
 
         }
+
+
+
+
+
     }
-
-
-
-
-
 }
 
 
