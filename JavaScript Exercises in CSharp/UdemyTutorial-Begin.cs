@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -703,36 +704,51 @@ namespace JavaScript_Exercises_in_CSharp
             ////2- Write a program and ask the user to enter their name.Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
 
 
-            static void Main(string[] args)
-            {
-                Console.WriteLine("Enter your name please.");
+            //static void Main(string[] args)
+            //{
+            //    Console.WriteLine("Enter your name please.");
 
-                var name = Console.ReadLine();
+            //    var name = Console.ReadLine();
 
-                var reversed = "";
+            //    var reversed = "";
 
-                for ( int i = name.Length - 1; i >=0; i--)
-                {
-                    reversed += name[i];
+            //    for (int i = name.Length - 1; i >= 0; i--)
+            //    {
+            //        reversed += name[i];
 
-                }
+            //    }
 
-                Console.WriteLine(reversed);
+            //    Console.WriteLine(reversed);
 
-                //second way to revers using Array method!!
+            //    //second way to revers using Array method!!
 
-                Console.WriteLine("Enter your name please.");
-                var name2 = Console.ReadLine();
+            //    Console.WriteLine("Enter your name please.");
+            //    var name2 = Console.ReadLine();
 
-                char[] charArray = name2.ToCharArray();
-                Array.Reverse(charArray);
-                Console.WriteLine(charArray);
-
-
+            //    char[] charArray = name2.ToCharArray();
+            //    Array.Reverse(charArray);
+            //    Console.WriteLine(charArray);
 
 
-                Console.ReadKey();
-            }
+            //   // Another way
+            //Console.WriteLine("enter your name");
+            //    var name3 = Console.ReadLine();
+
+            //    var array1 = new char[name3.Length];
+            //    for (var i = name3.Length; i > 0; i--)
+            //        array1[name3.Length - 1] = name3[i - 1];
+
+            //    var reversed4 = new string(array1);
+            //    Console.WriteLine("reversed name: " + reversed4);
+
+
+
+
+
+
+
+            //    Console.ReadKey();
+            //}
 
 
 
@@ -973,7 +989,7 @@ namespace JavaScript_Exercises_in_CSharp
             //}
 
 
-//            1- Write a program and ask the user to enter a few numbers separated by a hyphen.Work out if the numbers are consecutive. For example, if the input is "5-6-7-8-9" or "20-19-18-17-16", display a message: "Consecutive"; otherwise, display "Not Consecutive".
+            //            1- Write a program and ask the user to enter a few numbers separated by a hyphen.Work out if the numbers are consecutive. For example, if the input is "5-6-7-8-9" or "20-19-18-17-16", display a message: "Consecutive"; otherwise, display "Not Consecutive".
 
 
 
@@ -982,19 +998,136 @@ namespace JavaScript_Exercises_in_CSharp
 
 
 
-//2- Write a program and ask the user to enter a few numbers separated by a hyphen.If the user simply presses Enter, without supplying an input, exit immediately; otherwise, check to see if there are duplicates.If so, display "Duplicate" on the console.
+            //2- Write a program and ask the user to enter a few numbers separated by a hyphen.If the user simply presses Enter, without supplying an input, exit immediately; otherwise, check to see if there are duplicates.If so, display "Duplicate" on the console.
 
 
 
-//3- Write a program and ask the user to enter a time value in the 24-hour time format(e.g. 19:00). A valid time should be between 00:00 and 23:59. If the time is valid, display "Ok"; otherwise, display "Invalid Time". If the user doesn't provide any values, consider it as invalid time. 
+            //3- Write a program and ask the user to enter a time value in the 24-hour time format(e.g. 19:00). A valid time should be between 00:00 and 23:59. If the time is valid, display "Ok"; otherwise, display "Invalid Time". If the user doesn't provide any values, consider it as invalid time. 
 
 
 
-//4- Write a program and ask the user to enter a few words separated by a space.Use the words to create a variable name with PascalCase.For example, if the user types: "number of students", display "NumberOfStudents". Make sure that the program is not dependent on the input.So, if the user types "NUMBER OF STUDENTS", the program should still display "NumberOfStudents".
+            //4- Write a program and ask the user to enter a few words separated by a space.Use the words to create a variable name with PascalCase.For example, if the user types: "number of students", display "NumberOfStudents". Make sure that the program is not dependent on the input.So, if the user types "NUMBER OF STUDENTS", the program should still display "NumberOfStudents".
 
 
 
-//5- Write a program and ask the user to enter an English word. Count the number of vowels (a, e, o, u, i) in the word. So, if the user enters "inadequate", the program should display 6 on the console.
+            //5- Write a program and ask the user to enter an English word. Count the number of vowels (a, e, o, u, i) in the word. So, if the user enters "inadequate", the program should display 6 on the console.
+
+
+
+
+
+            //public static void Main(string[] args)
+            //{
+
+            //    Console.WriteLine("enter your name");
+            //    var name3 = Console.ReadLine();
+
+            //    var reversed4 = ReverseName(name3);
+
+            //    Console.WriteLine("reversed name: " + reversed4);
+
+            //}
+
+            //public static string ReverseName(string name3)
+            //{
+            //    var array1 = new char[name3.Length];
+            //    for (var i = name3.Length; i > 0; i--)
+            //        array1[name3.Length - 1] = name3[i - 1];
+
+            //  return new string(array1);
+
+
+            //}
+
+
+            //public static void Main(string[] args)
+            //{
+            //    var numbers = new List<int>();
+
+            //    while (true)
+            //    {
+            //        Console.Write("enter a number (or 'Quit' to exit): ");
+            //        var input = Console.ReadLine();
+
+            //        if (input.ToLower() == "quit")
+            //            break;
+
+            //        numbers.Add(Convert.ToInt32(input));
+            //    }
+
+            //    //var uniques = GetUniqueNumbers(numbers);
+
+
+
+            //    Console.WriteLine("Unique number: ");
+            //    foreach (var number in GetUniqueNumbers(numbers))
+            //        Console.WriteLine(number);
+
+            //    Console.ReadKey();
+
+            //}
+
+            //public static List<int> GetUniqueNumbers(List<int> numbers)
+            //{
+
+            //    var uniques = new List<int>();
+            //    foreach (var number in numbers)
+            //    {
+            //        if (!uniques.Contains(number))
+            //            uniques.Add(number);             
+            //    }
+            //    return uniques;
+            //}
+
+
+            //https://www.udemy.com/csharp-tutorial-for-beginners/learn/v4/t/lecture/2158920?start=0
+            static void Main(string[] args)
+            {
+
+                var path = @"c:\somefile.jpg";
+
+                //static methods, ok for small number of operations, it security checks each item.
+                File.Copy(@"c:\temp\myfile.jpg", "d:\temp\myfile/jpg", true);
+                File.Delete(path);
+                if (File.Exists(path))
+                {
+                    //
+                }
+
+              var content =   File.ReadAllText(path);
+
+
+                //Instances which security checks obeject once, then can make multipe changes to it.....
+                var fileInfo = new FileInfo(path);
+                fileInfo.CopyTo("....");
+
+                fileInfo.Delete();
+                
+                if(fileInfo.Exists)
+                {
+                    ///
+                }
+
+                
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
