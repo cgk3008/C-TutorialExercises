@@ -1080,41 +1080,67 @@ namespace JavaScript_Exercises_in_CSharp
             //}
 
 
-            //https://www.udemy.com/csharp-tutorial-for-beginners/learn/v4/t/lecture/2158920?start=0
+            ////https://www.udemy.com/csharp-tutorial-for-beginners/learn/v4/t/lecture/2158920?start=0
+            //static void Main(string[] args)
+            //{
+
+            //    var path = @"c:\somefile.jpg";
+
+            //    //static methods, ok for small number of operations, it security checks each item.
+            //    File.Copy(@"c:\temp\myfile.jpg", "d:\temp\myfile/jpg", true);
+            //    File.Delete(path);
+            //    if (File.Exists(path))
+            //    {
+            //        //
+            //    }
+
+            //  var content =   File.ReadAllText(path);
+
+
+            //    //Instances which security checks obeject once, then can make multipe changes to it.....
+            //    var fileInfo = new FileInfo(path);
+            //    fileInfo.CopyTo("....");
+
+            //    fileInfo.Delete();
+                
+            //    if(fileInfo.Exists)
+            //    {
+            //        ///
+            //    }
+
+                
+
+
+            //}
+
+
             static void Main(string[] args)
             {
+                Directory.CreateDirectory(@"c:\temp\folder1");
 
-                var path = @"c:\somefile.jpg";
+                var files = Directory.GetFiles(@"c:\Users\cgk30\source\repos\JavaScript Exercises in CSharp", "*.sln*", SearchOption.AllDirectories);
 
-                //static methods, ok for small number of operations, it security checks each item.
-                File.Copy(@"c:\temp\myfile.jpg", "d:\temp\myfile/jpg", true);
-                File.Delete(path);
-                if (File.Exists(path))
-                {
-                    //
-                }
+                foreach (var file in files)
+                    Console.WriteLine(file);
+                Console.WriteLine();
 
-              var content =   File.ReadAllText(path);
+                var directories = Directory.GetDirectories(@"c:\Users\cgk30\source\repos\JavaScript Exercises in CSharp\JavaScript Exercises in CSharp\", "*.*", SearchOption.AllDirectories);
+                foreach (var directory in directories)
+                    Console.WriteLine(directory);
+
+                Directory.Exists("...");
 
 
-                //Instances which security checks obeject once, then can make multipe changes to it.....
-                var fileInfo = new FileInfo(path);
-                fileInfo.CopyTo("....");
+                var directoryInfo = new DirectoryInfo("...");
+                directoryInfo.GetFiles();
+                directoryInfo.GetDirectories();
 
-                fileInfo.Delete();
-                
-                if(fileInfo.Exists)
-                {
-                    ///
-                }
 
-                
+                //https://docs.microsoft.com/en-us/dotnet/api/system.io.fileinfo?view=netframework-4.7.2
 
+                Console.ReadKey();
 
             }
-
-
-
 
 
 
