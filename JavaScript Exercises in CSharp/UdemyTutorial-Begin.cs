@@ -1114,33 +1114,33 @@ namespace JavaScript_Exercises_in_CSharp
             //}
 
 
-            static void Main(string[] args)
-            {
-                Directory.CreateDirectory(@"c:\temp\folder1");
+            //static void Main(string[] args)
+            //{
+            //    Directory.CreateDirectory(@"c:\temp\folder1");
 
-                var files = Directory.GetFiles(@"c:\Users\cgk30\source\repos\JavaScript Exercises in CSharp", "*.sln*", SearchOption.AllDirectories);
+            //    var files = Directory.GetFiles(@"c:\Users\cgk30\source\repos\JavaScript Exercises in CSharp", "*.sln*", SearchOption.AllDirectories);
 
-                foreach (var file in files)
-                    Console.WriteLine(file);
-                Console.WriteLine();
+            //    foreach (var file in files)
+            //        Console.WriteLine(file);
+            //    Console.WriteLine();
 
-                var directories = Directory.GetDirectories(@"c:\Users\cgk30\source\repos\JavaScript Exercises in CSharp\JavaScript Exercises in CSharp\", "*.*", SearchOption.AllDirectories);
-                foreach (var directory in directories)
-                    Console.WriteLine(directory);
+            //    var directories = Directory.GetDirectories(@"c:\Users\cgk30\source\repos\JavaScript Exercises in CSharp\JavaScript Exercises in CSharp\", "*.*", SearchOption.AllDirectories);
+            //    foreach (var directory in directories)
+            //        Console.WriteLine(directory);
 
-                Directory.Exists("...");
-
-
-                var directoryInfo = new DirectoryInfo("...");
-                directoryInfo.GetFiles();
-                directoryInfo.GetDirectories();
+            //    Directory.Exists("...");
 
 
-                //https://docs.microsoft.com/en-us/dotnet/api/system.io.fileinfo?view=netframework-4.7.2
+            //    var directoryInfo = new DirectoryInfo("...");
+            //    directoryInfo.GetFiles();
+            //    directoryInfo.GetDirectories();
 
-                Console.ReadKey();
 
-            }
+            //    //https://docs.microsoft.com/en-us/dotnet/api/system.io.fileinfo?view=netframework-4.7.2
+
+            //    Console.ReadKey();
+
+            //}
 
 
 
