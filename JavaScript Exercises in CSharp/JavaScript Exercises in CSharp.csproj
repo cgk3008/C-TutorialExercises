@@ -43,13 +43,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Button.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="EqualityComparisons.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="HackerRank2.cs" />
     <Compile Include="HackerRankExercises.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RazorTutorial.cs" />
+    <Compile Include="UdemyIntermediate.cs" />
     <Compile Include="UdemyTutorial-Begin.cs" />
   </ItemGroup>
   <ItemGroup>

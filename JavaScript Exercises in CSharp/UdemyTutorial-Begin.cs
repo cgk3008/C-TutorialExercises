@@ -1143,9 +1143,24 @@ namespace JavaScript_Exercises_in_CSharp
             //}
 
 
+            //    //just getting files and extensions!!!
+            //static void Main(string[] args)
+            //{
+            //    var path = @"C:\Projects\CSharpFundamentals\HelloWorld\HelloWorld.sln";
+
+            //    var dotIndex = path.IndexOf('.');
+            //    var extension = path.Substring(dotIndex);
+
+            //    Console.WriteLine("Extension: " + Path.GetExtension(path));
+            //    Console.WriteLine("File name: " + Path.GetFileName(path));
+            //    Console.WriteLine("File name without extension: " + Path.GetFileNameWithoutExtension(path));
+            //    Console.WriteLine("Directory name: " + Path.GetDirectoryName(path));
+            //}
 
 
+//            1- Write a program that reads a text file and displays the number of words.
 
+//2- Write a program that reads a text file and displays the longest word in the file.
 
 
 
